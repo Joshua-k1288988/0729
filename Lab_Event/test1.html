@@ -19,6 +19,9 @@
 	-moz-box-shadow: 0 1px 5px #333;
 	-webkit-box-shadow: 0 1px 5px #333;
 	z-index: 101;
+	-webkit-transition: top 3s ease-out;
+	-ms-transition: top 3s ease-out;
+	transition: top 3s ease-out;
 }
 
 .box h1 {
@@ -44,10 +47,12 @@ a.boxclose {
 	cursor: pointer;
 }
 
+
 </style>
+
 </head>
 <body>
-	<img src="images/clickme.png">
+	<img src="images/clickme.png"   onclick="doAnimateShow();">
 
 	<div class="box" id="box">
 		<a class="boxclose" id="boxclose"></a>
@@ -58,7 +63,9 @@ a.boxclose {
 
 	<script>
 	
-	
+	function doAnimateShow() {
+		document.getElementById("box").style.top = "200px";
+	}
 		
 	</script>
 
