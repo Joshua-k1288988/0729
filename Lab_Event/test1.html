@@ -6,7 +6,7 @@
 <style type="text/css">
 .box {
 	position: fixed;
-	top: 100px;
+	top: -200px;
 	left: 30%;
 	width: 450px;
 	background-color: #fff;
@@ -61,10 +61,17 @@ a.boxclose {
 			window off by clicking the cross.</p>
 	</div>
 
-	<script>
+
 	
+	<script>
+	document.getElementById("boxclose").onclick = doAnimateHide;
 	function doAnimateShow() {
 		document.getElementById("box").style.top = "200px";
+	}
+
+	function doAnimateHide() {
+			document.getElementById("box").style.top = "-200px";
+
 	}
 		
 	</script>
