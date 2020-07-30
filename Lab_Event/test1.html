@@ -71,9 +71,10 @@ a.boxclose {
 
 	function doAnimateHide() {
 			document.getElementById("box").style.top = "-200px";
-
+			event.cancelBubble = true;
 	}
 		
+	document.onclick = doAnimateShow;
 	</script>
 
 </body>
