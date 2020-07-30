@@ -19,9 +19,9 @@
 	-moz-box-shadow: 0 1px 5px #333;
 	-webkit-box-shadow: 0 1px 5px #333;
 	z-index: 101;
-	-webkit-transition: top 3s ease-out;
-	-ms-transition: top 3s ease-out;
-	transition: top 3s ease-out;
+	-webkit-transition: all 3s ease-out;
+	-ms-transition: all 3s ease-out;
+	transition: all 3s ease-out;
 }
 
 .box h1 {
@@ -66,7 +66,9 @@ a.boxclose {
 	<script>
 	document.getElementById("boxclose").onclick = doAnimateHide;
 	function doAnimateShow() {
-		document.getElementById("box").style.top = "200px";
+		//document.getElementById("box").style.top = "200px";
+		document.getElementById("box").style.left = event.clientX + "px";
+		document.getElementById("box").style.top = event.clientY + "px";
 	}
 
 	function doAnimateHide() {
